@@ -2,7 +2,7 @@
 
 - ImmortalWrt源码是[immortalwrt/immortalwrt/tree/openwrt-24.10](https://github.com/immortalwrt/immortalwrt/tree/openwrt-24.10)，openwrt-24.10，仅用作编译测试。
 - Github Actions来自于[P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)，[中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)。
-- 编译目标为WR30U (stock layout)
+- 编译目标为Qihoo 360T7 (custom U-Boot layout)
 
 ## Config文件生成参考
 
@@ -14,7 +14,7 @@ sudo sed -i 's#http://security.ubuntu.com#https://mirrors.huaweicloud.com#' /etc
 sudo apt update
 sudo apt upgrade -y
 sudo apt-get -y install build-essential unzip libncurses-dev subversion
-git clone --depth=1 https://github.com/immortalwrt/immortalwrt.git -b openwrt-24.10
+git clone --depth=1 https://github.com/Ljzkirito/immortalwrt.git -b op2410-360t7nmbm
 cd immortalwrt
 ./scripts/feeds update -a && ./scripts/feeds install -a
 make menuconfig

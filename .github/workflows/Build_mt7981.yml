@@ -24,8 +24,8 @@ on:
           - 'false'
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-24.10
+  REPO_URL: https://github.com/Ljzkirito/immortalwrt
+  REPO_BRANCH: op2410-360t7nmbm
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: mt7981.config
   DIY_P1_SH: diy-part1.sh
@@ -197,7 +197,7 @@ jobs:
       run: |
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "## ImmortalWrt openwrt-24.10 WR30U (stock layout) Compile Test $(date +"%Y.%m.%d-%H:%M")" >> release.txt
+        echo "## ImmortalWrt op-24.10 Qihoo 360T7 (custom U-Boot layout) Compile Test $(date +"%Y.%m.%d-%H:%M")" >> release.txt
         echo "- initramfs-factory" >> release.txt
         echo "  md5: $(md5sum ${{ env.FIRMWARE }}/*factory* | cut -d" " -f1)" >> release.txt
         echo "  sha256: $(grep ".*factory.*" ${{ env.FIRMWARE }}/sha256sums | grep -oE "\w{64}")" >> release.txt
